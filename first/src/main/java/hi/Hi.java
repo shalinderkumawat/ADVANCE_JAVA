@@ -21,18 +21,19 @@ public class Hi extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
+        PrintWriter out=response.getWriter();
 		String name=request.getParameter("name");
 		String age=request.getParameter("age");
-		String email=request.getParameter("email");
+//		String email=request.getParameter("email");
 		
-		if(name.equals("shailendra") && age.equals("18") && email.equals("s@.com"))
+		if(name.equals("shailendra") && age.equals("18"))
 		{
 			RequestDispatcher re=request.getRequestDispatcher("Hii");
 			re.forward(request, response);
 		}
 		else 
 		{
-			
+		 out.println("This is new ");
 		}
 		
 		
@@ -43,9 +44,7 @@ public class Hi extends HttpServlet {
 		return null;
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);

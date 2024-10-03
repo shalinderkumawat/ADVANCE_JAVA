@@ -21,7 +21,7 @@ public class Hii extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter a=response.getWriter();
-		a.println("hey chutiye");
+		a.println("hey ram");
 	}
 
 	
